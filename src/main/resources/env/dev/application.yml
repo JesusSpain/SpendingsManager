@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url:
+    driverClassName:
+    username:
+    password:
+    validationQuery:
+  jpa:
+    database-platform:
+    hibernate:
+      ddl-auto:
