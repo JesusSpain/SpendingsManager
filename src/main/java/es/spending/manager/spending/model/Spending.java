@@ -6,19 +6,14 @@ import java.math.BigDecimal;
 @MappedSuperclass
 public class Spending {
 
-    @Id
-    private int id;
+    @Column
     private String name;
+
+    @Column
     private BigDecimal amount;
+
+    @Enumerated(EnumType.STRING)
     private SpendingType type;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

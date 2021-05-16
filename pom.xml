@@ -75,6 +75,7 @@
 						<filtering>true</filtering>
 						<includes>
 							<include>*.yml</include>
+							<include>*.sql</include>
 						</includes>
 					</resource>
 				</resources>

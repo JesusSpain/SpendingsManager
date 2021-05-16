@@ -1,22 +1,32 @@
 package es.spending.manager.spending.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "BASIC_SPENDING")
+@Table(schema = "SPENDING", name = "BASIC_SPENDING")
 public class BasicSpending extends Spending {
 
-    @Column
-    private Date date;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SPENDING.SEQ_BASIC_SPENDING")
+    private Integer id;
 
-    public Date getDate() {
-        return date;
+    @Column
+    private Date payDate;
+
+    public int getId() {
+        return id;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getPayDate() {
+        return payDate;
+    }
+
+    public void setPayDate(Date payDate) {
+        this.payDate = payDate;
     }
 }
