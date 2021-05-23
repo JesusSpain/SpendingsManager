@@ -1,10 +1,10 @@
 package es.spending.manager.spending.service;
 
-import es.spending.manager.spending.model.BasicSpending;
+import es.spending.manager.spending.beans.SpendingBean;
 
 import java.util.List;
 
 public interface BasicSpendingService {
 
-    List<BasicSpending> findAll();
+    List<SpendingBean> findAll();
 }

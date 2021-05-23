@@ -1,10 +1,11 @@
 package es.spending.manager.spending.service;
 
-import es.spending.manager.spending.model.PeriodicalSpending;
+import es.spending.manager.spending.beans.PeriodicalSpendingBean;
+import es.spending.manager.spending.beans.SpendingBean;
 
 import java.util.List;
 
 public interface PeriodicalSpendingService {
 
-    List<PeriodicalSpending> findAll();
+    List<SpendingBean> findAll();
 }
