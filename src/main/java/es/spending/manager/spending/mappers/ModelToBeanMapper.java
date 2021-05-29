@@ -1,4 +1,4 @@
-package es.spending.manager.spending.utils;
+package es.spending.manager.spending.mappers;
 
 import es.spending.manager.spending.beans.BasicSpendingBean;
 import es.spending.manager.spending.beans.PeriodicalSpendingBean;
@@ -10,7 +10,7 @@ import org.springframework.beans.BeanUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpendingTransformer {
+public class ModelToBeanMapper {
 
     public static List<SpendingBean> basicSpendingModelToBean(List<BasicSpending> basicSpendings) {
         List<SpendingBean> spendings = new ArrayList<>();
