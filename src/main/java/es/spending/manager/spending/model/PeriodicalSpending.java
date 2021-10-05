@@ -8,7 +8,9 @@ import java.util.Date;
 public class PeriodicalSpending extends Spending {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SPENDING.SEQ_PERIODICAL_SPENDING")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PERIODICAL_SPENDING")
+    @SequenceGenerator(name = "SEQ_PERIODICAL_SPENDING",schema = "SPENDING",
+            sequenceName = "SEQ_PERIODICAL_SPENDING", allocationSize = 1)
     private Integer id;
 
     @Column

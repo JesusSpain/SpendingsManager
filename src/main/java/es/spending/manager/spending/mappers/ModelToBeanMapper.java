@@ -22,10 +22,30 @@ public class ModelToBeanMapper {
         return spendings;
     }
 
+    public static List<BasicSpending> basicSpendingBeanToModel(List<BasicSpendingBean> basicSpendingsBean) {
+        List<BasicSpending> spendings = new ArrayList<>();
+        basicSpendingsBean.forEach(spending -> {
+            BasicSpending spendingBean = new BasicSpending();
+            BeanUtils.copyProperties(spending, spendingBean);
+            spendings.add(spendingBean);
+        });
+        return spendings;
+    }
+
     public static List<SpendingBean> periodicalSpendingModelToBean(List<PeriodicalSpending> periodicalSpendings) {
         List<SpendingBean> spendings = new ArrayList<>();
         periodicalSpendings.forEach(spending -> {
             PeriodicalSpendingBean spendingBean = new PeriodicalSpendingBean();
+            BeanUtils.copyProperties(spending, spendingBean);
+            spendings.add(spendingBean);
+        });
+        return spendings;
+    }
+
+    public static List<PeriodicalSpending> periodicalSpendingBeanToModel(List<PeriodicalSpendingBean> basicSpendingsBean) {
+        List<PeriodicalSpending> spendings = new ArrayList<>();
+        basicSpendingsBean.forEach(spending -> {
+            PeriodicalSpending spendingBean = new PeriodicalSpending();
             BeanUtils.copyProperties(spending, spendingBean);
             spendings.add(spendingBean);
         });

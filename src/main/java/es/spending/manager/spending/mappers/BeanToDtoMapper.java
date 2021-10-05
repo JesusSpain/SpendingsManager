@@ -33,5 +33,25 @@ public class BeanToDtoMapper {
         return spendings;
     }
 
+    public static List<BasicSpendingBean> mapBasicSpendingToBean(List<Spending> basicSpendings) {
+        List<BasicSpendingBean> spendings = new ArrayList<>();
+        basicSpendings.stream().forEach(basicSpending -> {
+            BasicSpendingBean spending = new BasicSpendingBean();
+            BeanUtils.copyProperties(basicSpending, spending);
+            spendings.add(spending);
+        });
+        return spendings;
+    }
+
+    public static List<PeriodicalSpendingBean> mapPeriodicalSpendingToBean(List<Spending> periodicalSpendingBean) {
+        List<PeriodicalSpendingBean> spendings = new ArrayList<>();
+        periodicalSpendingBean.stream().forEach(periodicalSpending -> {
+            PeriodicalSpendingBean spending = new PeriodicalSpendingBean();
+            BeanUtils.copyProperties(periodicalSpending, spending);
+            spendings.add(spending);
+        });
+        return spendings;
+    }
+
     private BeanToDtoMapper() {}
 }

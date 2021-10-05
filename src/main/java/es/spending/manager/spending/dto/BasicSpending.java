@@ -1,17 +1,17 @@
 package es.spending.manager.spending.dto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class BasicSpending extends Spending {
 
     private Integer id;
     private Date payDate;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

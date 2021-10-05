@@ -38,4 +38,13 @@ public class Spending {
     public void setType(SpendingType type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Spending{" +
+                "name='" + name + '\'' +
+                ", amount=" + amount +
+                ", type=" + type +
+                '}';
+    }
 }

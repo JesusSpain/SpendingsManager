@@ -8,4 +8,6 @@ import java.util.List;
 public interface PeriodicalSpendingService {
 
     List<SpendingBean> findAll();
+
+    List<SpendingBean> saveSpending(List<PeriodicalSpendingBean> spendingBean);
 }
